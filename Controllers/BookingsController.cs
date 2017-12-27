@@ -12,12 +12,12 @@ namespace solaire.Controllers{
         public BookingsController(IMapper mapper, AppDbContext dbContext) : base (mapper, dbContext){}
 
         [HttpGet]
-        public BookingViewModel GetAll(){
+        public List<BookingViewModel> GetAll(){
             var bookings = DbContext
                             .Bookings
                             .ToList();
 
-            return Mapper.Map<BookingViewModel>(bookings);
+            return Mapper.Map<List<BookingViewModel>>(bookings);
         }
     }
 }

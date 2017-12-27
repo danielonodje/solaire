@@ -60,3 +60,9 @@ typings/
 #vscode
 .vscode/
 
+#binaries
+bin/
+obj/
+
+#rider
+.idea/
