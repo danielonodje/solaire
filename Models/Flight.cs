@@ -1,11 +1,13 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace solaire.Models{
     public class Flight{
-        public int Id;
+	    [Key]
+        public int Id { get; private set;}
         public DateTime StartTime;
         public DateTime EndTime;
-        public String Duration;
+        public string Duration;
 
         public Airport StartLocation;
 

@@ -1,6 +1,8 @@
+using System.ComponentModel.DataAnnotations;
 namespace solaire.Models{
     public class Airport{
-        public int Id;
+	    [Key]
+        public int Id { get; private set;}
         public string Name;
 
         public string Code;

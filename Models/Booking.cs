@@ -1,6 +1,9 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace solaire.Models{
     public class Booking{
-        public int Id;
+        [Key]
+        public int Id { get; private set;}
         public User User;
         public Payment Payment;
     }
